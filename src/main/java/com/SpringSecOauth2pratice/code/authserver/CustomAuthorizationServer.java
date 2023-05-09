@@ -25,7 +25,9 @@ public class CustomAuthorizationServer extends AuthorizationServerConfigurerAdap
 		clientDetails.inMemory().withClient("falam").secret("123456").
 		scopes("read").authorizedGrantTypes("password").and().
 		withClient("bipu").secret("123456").
-		scopes("read").authorizedGrantTypes("authorization_code").redirectUris("http://localhost:8080");
+		scopes("read").authorizedGrantTypes("authorization_code").redirectUris("http://localhost:8080")
+		.and()
+		.withClient("krishna").secret("123456789").scopes("READ_WRITE_TRUST").authorizedGrantTypes("client_credentials");
 		
 		
 		
